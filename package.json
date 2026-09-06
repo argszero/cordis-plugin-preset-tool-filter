@@ -1,0 +1,61 @@
+{
+  "name": "@argszero/cordis-plugin-preset-tool-filter",
+  "description": "Per-preset tool allowlist for the dsh harness: apply a ToolRestriction to an agent's scope so a preset (e.g. minimal) exposes only its intended tools and hides plugin-registered global tools (#5786).",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-preset": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "prepack": "tsc -p ."
+  },
+  "engines": {
+    "node": "^22.19 || >=24"
+  },
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "cordis",
+    "plugin",
+    "preset",
+    "tool-filter",
+    "minimal"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/argszero/cordis-plugin-preset-tool-filter.git"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.20.1"
+  }
+}
